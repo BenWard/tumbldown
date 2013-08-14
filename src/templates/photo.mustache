@@ -1,0 +1,8 @@
+{{>yaml}}
+{{#photos}}<figure class="photo">{{#link_url}}
+  <a href="{{{link_url}}}"><img src="{{{original_size.url}}}" alt="Image"></a>{{/link_url}}{{^link_url}}
+  <img src="{{{original_size.url}}}" alt="">{{/link_url}}{{#caption}}
+  <figcaption>{{caption}}</figcaption>{{/caption}}
+</figure>{{/photos}}
+
+{{{body}}}{{>source}}
