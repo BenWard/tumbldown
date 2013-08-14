@@ -48,7 +48,7 @@
     var i = 0;
     var line;
 
-    strip = strip !== undefined ? strip : true;
+    strip = (strip !== undefined) ? strip : true;
 
     if (post.title) return {
       title: post.title,
@@ -67,13 +67,13 @@
         // we want to strip out the link mark-up...
 
         // Crudely check for nested links in HTML or Markdown:
-        if (strip && /(<a |\]\(http)/i.test(line)) {
+        if (strip && !/(<a |\]\(http)/i.test(line)) {
           // If there has been no other content so far (allowing one block
           // for quote attribution), and we're stripping titles out of the
           // text to avoid duplication, do it:
           //
           // If there was a link nested in the title, we leave it be.
-          lines.splice(i, 1);
+          lines.splice(i, 2);
           text = lines.join("\n");
         }
 
