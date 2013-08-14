@@ -1,0 +1,13 @@
+{
+  "name" : "tumbldown"
+, "description" : "Download all posts from a Tumblr blog and store locallly"
+, "version" : "0.0.1"
+, "directories" : { "lib" : "./lib" }
+, "main" : "index.js"
+, "author" : "Ben Ward"
+, "repository" : { "type":"git", "url":"http://github.com/benward/tumbldown.git" }
+, "dependencies": {
+    "request": "*",
+    "mustache": "*"
+  }
+}
